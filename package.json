@@ -1,0 +1,29 @@
+{
+  "name": "nasdex-swap-periphery",
+  "version": "1.0.0",
+  "description": "periphery contract of Nasdex swap.",
+  "main": "index.js",
+  "scripts": {
+    "compile": "npx hardhat compile",
+    "test": "npx hardhat test",
+    "deploy": "npx hardhat run scripts/deploy.js",
+    "deploy-mumbai": "npx hardhat run scripts/deploy.js --network mumbai"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://git.cplus.link/nasdex/nasdex-swap-periphery.git"
+  },
+  "keywords": [
+    "swap"
+  ],
+  "author": "Iwan",
+  "license": "ISC",
+  "devDependencies": {
+    "@nomiclabs/hardhat-ethers": "^2.0.3",
+    "@nomiclabs/hardhat-waffle": "^2.0.1",
+    "chai": "^4.3.4",
+    "ethereum-waffle": "^3.4.0",
+    "ethers": "^5.5.2",
+    "hardhat": "^2.7.0"
+  }
+}
