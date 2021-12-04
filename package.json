@@ -1,8 +1,17 @@
 {
-  "name": "nasdex-swap-periphery",
+  "name": "nasdex-swap",
   "version": "1.0.0",
-  "description": "periphery contract of Nasdex swap.",
+  "description": "An AAM type of decentralized exchange which is runs on EVM.",
   "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "@nomiclabs/hardhat-ethers": "^2.0.3",
+    "@nomiclabs/hardhat-waffle": "^2.0.1",
+    "chai": "^4.3.4",
+    "ethereum-waffle": "^3.4.0",
+    "ethers": "^5.5.2",
+    "hardhat": "^2.7.0"
+  },
   "scripts": {
     "compile": "npx hardhat compile",
     "test": "npx hardhat test",
@@ -11,19 +20,8 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://git.cplus.link/nasdex/nasdex-swap-periphery.git"
+    "url": "https://git.cplus.link/nasdex/Nasdex-swap.git"
   },
-  "keywords": [
-    "swap"
-  ],
   "author": "Iwan",
-  "license": "ISC",
-  "devDependencies": {
-    "@nomiclabs/hardhat-ethers": "^2.0.3",
-    "@nomiclabs/hardhat-waffle": "^2.0.1",
-    "chai": "^4.3.4",
-    "ethereum-waffle": "^3.4.0",
-    "ethers": "^5.5.2",
-    "hardhat": "^2.7.0"
-  }
+  "license": "ISC"
 }

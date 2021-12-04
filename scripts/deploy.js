@@ -3,8 +3,6 @@ const { expect } = require("chai");
 const env = require("hardhat");
 const { ethers } = require("hardhat");
 
-const FACTORY = "0x21051bb022a8B5aED0F0df7B34c9F067127c39bD";
-const WETH = "0x22104669DA1a0a1B3631EdDee6b1B4d41c521F83";
 
 async function main() {
     [deployer] = await ethers.getSigners();
@@ -15,10 +13,10 @@ async function main() {
     
     console.log("Account balance:", (await deployer.getBalance()).toString());
 
-    const UniswapV2Router02 = await ethers.getContractFactory("UniswapV2Router02");
-    const instance = await UniswapV2Router02.deploy(FACTORY, WETH);
+    const UniswapV2Factory = await ethers.getContractFactory("UniswapV2Factory");
+    const instance = await UniswapV2Factory.deploy(deployer.address);
 
-    console.log("UniswapV2Router02 address: " + instance.address);
+    console.log("UniswapV2Factory address: " + instance.address);
 }
 
 main().then(() => process.exit(0)).catch(error => {
