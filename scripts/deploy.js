@@ -13,10 +13,10 @@ async function main() {
     
     console.log("Account balance:", (await deployer.getBalance()).toString());
 
-    const UniswapV2Factory = await ethers.getContractFactory("UniswapV2Factory");
-    const instance = await UniswapV2Factory.deploy(deployer.address);
+    const NasdexSwapFactory = await ethers.getContractFactory("NasdexSwapFactory");
+    const instance = await NasdexSwapFactory.deploy(deployer.address);
 
-    console.log("UniswapV2Factory address: " + instance.address);
+    console.log("NasdexSwapFactory address: " + instance.address);
 }
 
 main().then(() => process.exit(0)).catch(error => {
