@@ -17,6 +17,7 @@ async function main() {
     const instance = await NasdexSwapFactory.deploy(deployer.address);
 
     console.log("NasdexSwapFactory address: " + instance.address);
+    console.log("code hash: " + await instance.INIT_CODE_PAIR_HASH());
 }
 
 main().then(() => process.exit(0)).catch(error => {
